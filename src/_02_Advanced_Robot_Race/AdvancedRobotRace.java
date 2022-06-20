@@ -32,13 +32,12 @@ public class AdvancedRobotRace {
 				while (isRacing == true) {
 					int randomInt = rand.nextInt(50);
 					robots[x].move(randomInt);
-					for (int j = 0; j < robots.length; j++) {
-						if (robots[j].getY() < 5) {
+						if (robots[x].getY() < 5) {
 							isRacing = false;
-							System.out.println("Robot " + (j + 1) + " won");
+							System.out.println("Robot " + (x+1) + " won");
 							break;
 						}
-					}
+					
 				}
 
 			});
